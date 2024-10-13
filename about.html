@@ -198,15 +198,30 @@
   </style>
 </head>
 <body>
-<div class="breathing-wall"></div>
-<div>
-<span id="name">Lorn Jaeger</span> - <span id="time"></span>
-</div>
-<script>function updateTime(){const options={timeZone:'America/Denver',hour:'2-digit',minute:'2-digit',second:'2-digit'},formatter=new Intl.DateTimeFormat('en-US',options),timeString=formatter.format(new Date());document.getElementById('time').textContent=timeString;}setInterval(updateTime,1000);updateTime();</script>
+<div class="breathing-wall" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; background: radial-gradient(circle at center, rgba(255,255,255,0) 40%, rgba(0,0,0,0.05) 100%); opacity: 0.5; animation: breathe 8s infinite ease-in-out; z-index: -1;"></div>
 
-<a href="home.html">home</a> |
-<a href="about.html">about</a> |
-<a href="https://github.com/lorn-jaeger">code</a> | <a href="contact.html">contact</a>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span id="name" style="font-weight: bold;">Lorn Jaeger</span>
+    <span id="time"></span>
+  </div>
+  
+  <script>
+    function updateTime() {
+      const options = { timeZone: 'America/Denver', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const timeString = formatter.format(new Date());
+      document.getElementById('time').textContent = timeString;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="home.html" style="text-decoration: none; margin-right: 10px;">home</a> |
+    <a href="about.html" style="text-decoration: none; margin-left: 10px; margin-right: 10px;">about</a> |
+    <a href="https://github.com/lorn-jaeger" style="text-decoration: none; margin-left: 10px; margin-right: 10px;">code</a> | 
+    <a href="contact.html" style="text-decoration: none; margin-left: 10px;">contact</a>
+  </div>
 <hr>
 <center>
 <img src="./images/me.jpg" alt="Me" style="float: right; width: 150px; height: auto; margin-left: 20px;">
@@ -219,4 +234,7 @@
 </center>
 
 </body>
+
+
+
 </html>
