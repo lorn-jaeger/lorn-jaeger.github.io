@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+    background-color: aliceblue; /* Match the original background color */
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+a {
+    color: #336699; 
+    text-decoration: underline;
+}
+a:visited {
+    color: #336699;
+}
+a:hover,
+a:active {
+    color: #336699;
+}
+
+/* Main container for centering content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Home content container */
+.home-content {
+    width: 100%;
+    max-width: 450px; /* Ensure the content doesn't exceed 450px */
+}
+
+/* Time display */
+#missoula-time {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Home page image */
+.home-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid lightblue; /* Match the original border */
+}
+
+/* Link container */
+#link-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Link margins within the link container */
+#link-container a {
+    margin: 0 5px;
+}
+
+/* Remove default margin from images to prevent unintended styling */
+img {
+    margin: 0;
+}
+
+/* Header Styles */
+.main-header {
+    width: 100%;
+    max-width: 400px; /* Match the width of the home content */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Link container inside header */
+.main-header #link-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Link styles inside header */
+.main-header #link-container a {
+    margin: 0 5px;
+    color: #336699;
+    text-decoration: underline;
+}
+
+.main-header #link-container a:visited {
+    color: #336699;
+}
+
+.main-header #link-container a:hover,
+.main-header #link-container a:active {
+    color: #336699;
+}
+
+/* --- Essay and Blog Post Styles --- */
+
+/* Main Content Container */
+.main-content {
+    max-width: 500px; /* Limit line length for readability */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #222;
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* First Heading (e.g., h1) */
+h1 {
+    margin-top: 0; /* Remove top margin for the first heading */
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6; /* Increase line spacing for readability */
+    margin-bottom: 1em;
+}
+
+/* Images within content */
+.main-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center images within content */
+}
+
+/* Code Blocks */
+pre, code {
+    background-color: #e8e8e8;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #ccc;
+    margin-left: 0;
+    padding-left: 16px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .main-content, .main-header, footer {
+        padding: 15px;
+    }
+}
+
+
+/* Footer Styles for Blog Posts */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    max-width: 650px;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.post-footer a {
+    text-decoration: none;
+    color: #336699;
+    flex: 1;
+}
+
+.post-footer a:first-child {
+    text-align: left;
+}
+
+.post-footer a:nth-child(2) {
+    text-align: center;
+}
+
+.post-footer a:last-child {
+    text-align: right;
+}
