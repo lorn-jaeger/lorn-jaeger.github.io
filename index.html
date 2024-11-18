@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lorn.us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the shared stylesheet -->
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <main class="main-container">
+        <!-- Container to hold time, image, and links -->
+        <div class="home-content">
+            <!-- Time aligned with the left edge of the image -->
+            <div id="missoula-time">
+                TIME IN MISSOULA MT - <span id="time"></span> MDT
+            </div>
+            <!-- Image centered within the container -->
+            <img src="static/desk.jpg" alt="A description of the image" class="home-image">
+            <!-- Links centered below the image -->
+            <div id="link-container">
+                <a href="/about.html">about</a> |
+                <a href="/blog.html">blog</a> |
+                <a href="https://github.com/lorn-jaeger">code</a> |
+                <a href="/contact.html">contact</a> |
+                <a href="/projects.html">projects</a> |
+                <a href="/reading.html">reading</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function updateTime() {
+            document.getElementById('time').textContent = new Date().toLocaleTimeString('en-US', {
+                timeZone: 'America/Denver',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
